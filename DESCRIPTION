@@ -1,0 +1,48 @@
+Package: eics
+Title: Use randomForest to check the backdoor criteria and feedback loops. 
+Version: 0.1.1
+Authors@R: 
+    person(given = "James",
+           family = "Bang",
+           role = c("aut", "cre"),
+           email = "bangjamest@sau.edu",
+           comment = c(ORCID = "0000-0002-7701-8220"))
+    person(given = "John", 
+           family = "David", 
+           email = "davidja@vmi.edu", 
+           role = "aut", "ctb")
+    person(given = "Atin", 
+           family = "BasuChoudhary", 
+           email = "basucoudharya@vmi.edu", 
+           role = "ctb")
+    person(given = "Tinni", 
+           family = "Sen", 
+           email = "sensb@vmi.edu", 
+           role = "ctb")
+Author: James Bang [aut, cre], 
+  John David [aut], 
+  Atin Basuchoudhary [ctb],
+  Tinni Sen [ctb]
+Maintainer: James Bang <bangjamest@sau.edu>
+Description: This function assists covariate selection by helping to identify alternate treatments, 
+  intermediate collider variables, and feedback among a treatment and the controls.
+  Functions include: 
+    eics() to implement "empirically-informed covariate selection" with  random forest to check backdoor
+      criteria. 
+    altTreat() implements the search for alternate treatments. 
+    feedbackVars() checks for feedback between the treatment and the controls. 
+    intermediateVars() checks whether the control candidates introduce intermediate bias. 
+License: use_gpl3_license()
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: R(>= 4.0.0),
+  randomForest,
+  ggplot2
+Imports: 
+  parallel, 
+  doParallel, 
+  doRNG, 
+  foreach
+Suggests: 
